@@ -3,7 +3,7 @@ const admin = require('firebase-admin');
 
 admin.initializeApp();
 
-//newsfeed section
+//newsfeed section of app
 exports.getScreams = functions.https.onRequest((request, response) => {
     admin.firestore().collection('screams').get()
         .then(data => {
